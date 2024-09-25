@@ -16,21 +16,22 @@ import base64
 # seq.decode(keyDER)
 # keyPub = RSA.construct((seq[0], seq[1]))
 
-# # Per iniziare generiamo una coppia di chiavi e le stampiamo
-# # Generating RSA Key Pair
-# # Una volta stampate, non serve più
+# Per iniziare generiamo una coppia di chiavi e le stampiamo
+# Generating RSA Key Pair
+# Una volta stampate, non serve più
 # key_pair = RSA.generate(2048)
 # print(key_pair.export_key())
 # public_key = key_pair.publickey()
 # print(public_key.export_key())
 # exit(0)
-sPriv = "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAn1Q4/NisrrEa/Su+tTERKnsTelXHanenIe8nYbudpY9ymyXJ\n5SZDLVivQZ8Ml0g0ivNQ134ZzqGkMt8COK5odoworlmpDFCU+w5HmOlyy91/NPJ1\nLFSUV2B4GJhCBcGeK4VtKhimpDdWLiuo9E3I+GF7QAOFvt+4lCY1xycUHkzrVXuI\nLKOjYahZf0hPs6CeoySeVKvhIhb1u4yJLlbQgeQUyOs420rgHiUf+OxJ5n+KKWZe\n9NmwyHro37P631BCJtZM/Iov8im9/y9TWraFZP59QOUbjcUokv0YOK8b31MkNeA/\nt9LPQg2lTpaCTpbwJ1NmYA2uWD+WGCJm3AemgQIDAQABAoIBAA7SsJyWx0tXWcny\nVG3vWzKnEahWK6p+6EiIGJNcokLhZh8DXysCVMn2ur4G/zkMiYA149sF4H5wsQyJ\n4onbHAfkwUd7OvbU1mTHBCfjQYAFouHjqWgO6bV5WaL8I1moFOrlS8MuA5mP4Q+E\nQKs97gkW/0xKJ5rFnfABNWFKWZz56FpD7/zBTmgy2wtHMJYUmt2BskO86pFgeEw8\nmW6d/GNtX0Y2N7OENcDd8vGcJg91ZGx3D8YXVk+fCZXEVxFarQPuNx9xwCRATo1D\niek2yumuVVL1chyCIxXzDV+yBCOgAJM5OYj0C1VnU4EVvViXg44QOjC+wQYB4tEa\nx2auf+MCgYEAvPvPFuY4D9SEqcmUR9NsYr/EOgs7YTsTpGPyGbsHTFZmicIF/Obh\n0iIut3k7A5pg/lnLuyPKQBD6xsNZNsyY67oz4mMBfrPBxIsZZMhmDQNgyL67YI0h\ntUxIZyhT437FrXFbnXf9udEp0WoOtxbdwIinefrK/4OS4o3lPFo1eRsCgYEA19RT\nW2fpzXjHYBjsCix4zO8BF20LKKml1YAuRT6kR72bczzpZQA7vVhzZYd9uo+hAsPr\nGrsIm4m6NMoAMYnO6V+Wfzcr4IqvJnI9z9yUjaml3UPp0uGAfEPEmRmeeAl+g+gx\nuFyjj/enUlxELVc4JAOlD9q/pvC2J91VZ/hnFJMCgYAV8/ZphZLLm/dRNd5ovZGg\nowArcfSS5ebxOL796DD/2CWPKR/C8hsXauscWxPU5lEQGuREt/KdoJtRDY5GhFvb\nPkUarj+VNVJz/2iSwYjBSDws9aMUozBgPB1JBnFAQxC5hiqLT04FENwXvIc7E4fs\n/rLdw5ljNyiP8sXHTf9aMwKBgQCk9kFcDNlz1cu1lHbc887E/Cx+ZjbwNnJs89Lp\n1A4mUzK8aqMNMpd2imNxB5U+gccT4QESZkAW+bbb4EUzl9wRHaFezKF5tyZWIV1D\nQZo9iJwguWa/auIUmItsZVts7fzH/zH5cr0FLcmytpjZet+LD0obCxwPEc54O8Cq\nff7zhwKBgCteXoEnI7oOk50We0DlpzURvB90LbraqUF0xrSEsDNLonTEwcffdssE\npglmYr8MTa7tbc/7jJhbYe4r2J5cDfiqgEYRGj5oKlHLo9MCEKdSD22JsXq/GzjJ\nwke5+Zl4vYARKmH1IfTI0Ofpghc3Z/NBfRqTGD4CmOVd1jwC6aA5\n-----END RSA PRIVATE KEY-----"
-sPub = "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn1Q4/NisrrEa/Su+tTER\nKnsTelXHanenIe8nYbudpY9ymyXJ5SZDLVivQZ8Ml0g0ivNQ134ZzqGkMt8COK5o\ndoworlmpDFCU+w5HmOlyy91/NPJ1LFSUV2B4GJhCBcGeK4VtKhimpDdWLiuo9E3I\n+GF7QAOFvt+4lCY1xycUHkzrVXuILKOjYahZf0hPs6CeoySeVKvhIhb1u4yJLlbQ\ngeQUyOs420rgHiUf+OxJ5n+KKWZe9NmwyHro37P631BCJtZM/Iov8im9/y9TWraF\nZP59QOUbjcUokv0YOK8b31MkNeA/t9LPQg2lTpaCTpbwJ1NmYA2uWD+WGCJm3Aem\ngQIDAQAB\n-----END PUBLIC KEY-----"
+sPriv = "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAnnYn30q14bl/w7vVYwkonffu8uQI/YO3BwzDfHur13G5bhB5\nfKbS7ZkPwd0FcCItRuQYQd+j3kceZ3CKz+6Smk5Q3qDsqhG41YV9Mv1JUfN7anXy\njNkoRJ6VhWa9klG7pIJ0VA6QNMyFI+cO0vnq+R1j6rtG3v1HyeP6FUkAU3D/0CCf\nXXrwyGiPGiOvHvKf8M7uTbno3vL2CLY2ekg0NIFJ+eu2Bjk1p+MkwFMMsD9vDfvZ\npTDqHWIs9UvBy4X9+ePfMZEbzYdXaFVTAgGZBQZ9IxJxHKaB5iLHnvrTjWvztPj3\n0qZS/1jpisYbYjC9R/YskG484nCtCuOHTOUR0QIDAQABAoIBACDV6pK4VEKbMfix\nCDluqSo8uVi+/Ibt34QYNrzpkpUBBZPjWY1FM2GVLUD2h/0xs9CkDMu/qCDz+z6j\ngTwvm1TaxCKx1YCzTen+8I/bkPEoo0sO+E0L5a58bw7W2JMEmT2wY6MUZnjuZWto\nYnfA3lozJyR5nKix8smI0mZNO4JOjVZNnORUf8LyYWF4/MOlEYGCcNfikb340EAf\nMI/OIKilckCyUIXEgSiWumW9gCnpoZDlHqz/Or78p+Va8m8huACuRYmKweJt+hcq\nv1w+bzXr7Pz4YtcQpKycI9z7vvztwe99craXByncu5Vbewv4jQ2qlqOfJT3rvuNv\njR5Tpv0CgYEAx8rn65VYAVkaIgvzQtreL4jg2xUHjFultg6J4wMR859sYYkmLlbw\nxp4HMNBAofSYt30v7G49Dn0y99EkBG9tETT1IPx76MKLO/V79EqHEO1C4NuS0rQX\n8EjTLqSfaq1WrOpdWslO7q0eSlxjV+DhLhQ9NI/CUZDQDhanJu3/v7UCgYEAywqU\nr7E01lOPUtAia/FnJjizNhDha5aPxnhhjrpx36e/LkCMumWUggnY4WTQE+N2qDYH\n22X6WiiI69ba9/hvOMcrsXtW28TlIKm0HYkAOlET5Lmr3/afUp/HeJIoGRmG0DlY\nUQsGI8N97N5o3R/ZicJr1G6FFFnvqpYa4Js0Qy0CgYBlML6gEibdn+xdfCH8JXBN\nMQ15yL/m9fALMnfh84cfFgrFp7of1EbkwdswfPmPTZwfqxcfr4HbGcw7ucB9QpZC\nFcllqJt1ezsb5iyewTSBfTnXOz602yQYvjm/sP9Q/3Qb5iPcPINu3V2vGfXy52IF\nfZi2S22G9Ep8KDsGu5pB1QKBgDg4ttErbWkHfEE/FrjzAE/qFV2cMP8ckrUvMjxW\nTh/TEDIbd5xJcmTLmz1WL/PB4WJUi7pps3fxj3BWbw2Iwitjoyqi73stOxDfTNt8\nyw5a0vpbm0cJwDYdvhsZxXalxdm0d0sBlXKjuCO1ti28mvz1U+xfqgPnn2CJ7elR\nsJgFAoGBAL2eWP+gZJKLe7juI6g9p5ixy2s4n5c1pPhEsc21i5pg5KfCF6IMw2kx\n8rzF5V+L2bOi5UD81HfRcZ/1ackP6uTSsRG3mv0MNXvLGAnzre6H+Ei6fXvCDA3T\nBtwG7ZC4fWjMvjirY38LXgLZKUTAqZEdPPKCTU7y/AC1VPq+F6dj\n-----END RSA PRIVATE KEY-----"
+sPub = "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnnYn30q14bl/w7vVYwko\nnffu8uQI/YO3BwzDfHur13G5bhB5fKbS7ZkPwd0FcCItRuQYQd+j3kceZ3CKz+6S\nmk5Q3qDsqhG41YV9Mv1JUfN7anXyjNkoRJ6VhWa9klG7pIJ0VA6QNMyFI+cO0vnq\n+R1j6rtG3v1HyeP6FUkAU3D/0CCfXXrwyGiPGiOvHvKf8M7uTbno3vL2CLY2ekg0\nNIFJ+eu2Bjk1p+MkwFMMsD9vDfvZpTDqHWIs9UvBy4X9+ePfMZEbzYdXaFVTAgGZ\nBQZ9IxJxHKaB5iLHnvrTjWvztPj30qZS/1jpisYbYjC9R/YskG484nCtCuOHTOUR\n0QIDAQAB\n-----END PUBLIC KEY-----"
 
+sPub2="-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkYad8prkiIowSLoIDWKP\n8o+aYbA2lRfuyg10WiIIaVLLwlmjld04D992omciUXpEOrCrLbs1OMsTB53c+Wwm\n3ptbjKGCmVXLIBDni7XmBgOok652EfEMH/aJOb3DxKe9wQt80zFJkziYjr89jNzE\n97Wr0/Nq0KvoQUWuAk71MUKK5blfzZKejc9QGRH9vVPzGBiEY42VQ0vzqQXULm9W\nrBS3HC5cABrg7ZIniptKxtTd1beTbq6RC0yTD7hNyhQ3nRCFVEozdJ6Q4OnH/MCz\nOCSj8YT81su1+7T4l1udfBNXRCxfPeIsxfbuBliLXfDfX/Vl2bkXtTMrrtq6pY3B\nTwIDAQAB\n-----END PUBLIC KEY-----"
 # Ora dobbiamo ricreare le chiavi a partire da queste due stringhe
 key_pair = RSA.import_key(sPriv)
 public_key = RSA.import_key(sPub)
-
+PK_LOREN= RSA.import_key(sPub2)
 
 # Function to encrypt message
 def encrypt_message(message, pub_key):
@@ -47,10 +48,14 @@ def decrypt_message(encrypted_message, priv_key):
 
 
 # Example usage
-message = "This is a secret message"
-encrypted_message = encrypt_message(message, public_key)
+encrypted_message = "W5MVRu8aL3oBZWghm/eXYvDgPPdBI3mI/U648+Oy4wsCuvR6yYXsHhpdTXmebIW2988cFb0U0OBtRpkOYw92dsyCfY2DIgEtu7paNJEvMZlgBotzqxE53AUNFWj6QhFkFYRg0cN/bvj+0XBxS2FY7rXO1/kT/EYtNY/fWIVLFo7xydeucsQFv5P1YOjnlIZrXYOkdmlSV2dGlT4r0CohqG0n/u4c9ThBqML/Sg/5sAo0WYBBRIdc8Dfjm1ago3Rv+y+xp25FteyMjp3+iCCRIxli+irnw5VetMM+VwjqPrNMEm8PVc+NJZzUv/1Y9sczNnYP0as81LMwNGaK4u335Q=="
+# message="aaa"
+# encrypted_message = encrypt_message(message, public_key)
 decrypted_message = decrypt_message(encrypted_message, key_pair)
 
-print("Original Message:", message)
-print("Encrypted Message:", encrypted_message)
+# print("Original Message:", message)
+# print("Encrypted Message:", encrypted_message)
 print("Decrypted Message:", decrypted_message)
+messagge="poi ti spiego"
+decri_message= encrypt_message(messagge , PK_LOREN)
+print("messaggio criptato \n"+decri_message)
