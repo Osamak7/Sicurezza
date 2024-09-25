@@ -1,0 +1,3 @@
+traceroute -n www.google.it = serve per vedere il nodo piu prossimo con cui ci colleghiamo alla rete
+ripassare (openssl)
+cat /proc/cpuinfo = informazioni sulla cpu (bogomips = velocita)
